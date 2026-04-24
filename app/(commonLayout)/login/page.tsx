@@ -1,8 +1,11 @@
-export default function LoginPage() {
+import { LoginForm } from "@/components/modules/authentication/login-form"
+
+export default function Page() {
   return (
-    <div>
-      <h1>Login Page</h1>
-      <p>Welcome to the login page!</p>
-    </div>      
+    <div className="flex min-h-svh w-full items-center justify-center p-6 md:p-10">
+      <div className="w-full max-w-sm">
+        <LoginForm />
+      </div>
+    </div>
   )
-}   
+}
