@@ -4,8 +4,10 @@ import { blogsServices } from "@/src/services/blogs.services";
 
 export default async function Home() {
   const result = await blogsServices.getBlogPosts({
-    isFeatured: true,
+    isFeatured: false,
     search:""
+  },{
+    cache: "no-store"
   });
   
   // কনসোলের অবজেক্ট থেকে আসল অ্যারেটি বের করে নিচ্ছি
