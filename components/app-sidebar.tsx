@@ -16,7 +16,7 @@ import {
 import Link from "next/link"
 import { AdminRoute } from "@/src/routes/adminRoute"
 import { UserRoute } from "@/src/routes/userRoute"
-import { Route } from "@/src/type.route"
+import { Route } from "@/src/types/type.route"
 
 // This is sample data.
 

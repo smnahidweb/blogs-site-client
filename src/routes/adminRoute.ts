@@ -1,4 +1,4 @@
-import { Route } from "../type.route";
+import { Route } from "../types/type.route";
 
 export const AdminRoute:Route[] = [
     
