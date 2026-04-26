@@ -1,6 +1,5 @@
-import { error } from "console"
+
 import { env } from "../env"
-import { url } from "inspector";
 
 
 interface serviceOption {
@@ -62,6 +61,32 @@ export const blogsServices = {
         }
 
 
+
+},
+
+getBlogPostById : async function(id:string){
+const API_URL = env.API_URL;
+    try{
+
+        const result = await fetch(`${API_URL}/posts/${id}`)
+        const data = await result.json()
+        console.log(data)
+
+        return {
+            data:data , error:{
+                err:null
+            }
+        }
+
+    }
+
+    catch(err){
+        return{
+            data:null,error:{
+                err:"Somethinks is wrong"
+            }
+        }
+    }
 
 }
 
